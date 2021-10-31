@@ -10,7 +10,7 @@
  */
 
 
-// creates a line of * for a given length
+//Create a line of * for a given length
 function makeLine(length) {
   var line = "";
   for (var j = 1; j <= length; j++) {
@@ -19,14 +19,27 @@ function makeLine(length) {
   return line + "\n";
 }
 
-// your code goes here.  Make sure you call makeLine() in your own code.
+//Create a triangle by concating lines of * as a string.
 function buildTriangle(numLines) {
   let triangle = "";
   for (let i = 1; i <= numLines; i++) {
       triangle += makeLine(i);
   }
-  return triangle.slice(0,-2);
+  return triangle.slice(0,-2); //Remove last '\n' characters and return completed triangle.
 }
 
-// test your code by uncommenting the following line
-console.log(buildTriangle(15));
+//Tests:
+console.log(buildTriangle(10));
+//Output:
+/*
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * *
+*/
